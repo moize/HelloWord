@@ -1,4 +1,4 @@
-package com.laanait.shop.Model;
+package com.laanait.shop.model;
 
 public class ShopModel {
 
