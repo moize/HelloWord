@@ -1,6 +1,6 @@
 package com.laanait.shop.model;
-// default package
-// Generated 20 nov. 2011 19:45:07 by Hibernate Tools 3.4.0.CR1
+
+// Generated 20 nov. 2011 22:24:37 by Hibernate Tools 3.4.0.CR1
 
 import java.util.HashSet;
 import java.util.Set;
@@ -10,16 +10,12 @@ import java.util.Set;
  */
 public class Users implements java.io.Serializable {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	private Integer userId;
 	private String userEmail;
 	private String userPassword;
-	private Set<Logs> logses = new HashSet<Logs>(0);
-	private Set<Shops> shopses = new HashSet<Shops>(0);
-	private Set<Companies> companieses = new HashSet<Companies>(0);
+	private Set logses = new HashSet(0);
+	private Set shopses = new HashSet(0);
+	private Set companieses = new HashSet(0);
 
 	public Users() {
 	}
@@ -29,8 +25,8 @@ public class Users implements java.io.Serializable {
 		this.userPassword = userPassword;
 	}
 
-	public Users(String userEmail, String userPassword, Set<Logs> logses,
-			Set<Shops> shopses, Set<Companies> companieses) {
+	public Users(String userEmail, String userPassword, Set logses,
+			Set shopses, Set companieses) {
 		this.userEmail = userEmail;
 		this.userPassword = userPassword;
 		this.logses = logses;
@@ -62,27 +58,27 @@ public class Users implements java.io.Serializable {
 		this.userPassword = userPassword;
 	}
 
-	public Set<Logs> getLogses() {
+	public Set getLogses() {
 		return this.logses;
 	}
 
-	public void setLogses(Set<Logs> logses) {
+	public void setLogses(Set logses) {
 		this.logses = logses;
 	}
 
-	public Set<Shops> getShopses() {
+	public Set getShopses() {
 		return this.shopses;
 	}
 
-	public void setShopses(Set<Shops> shopses) {
+	public void setShopses(Set shopses) {
 		this.shopses = shopses;
 	}
 
-	public Set<Companies> getCompanieses() {
+	public Set getCompanieses() {
 		return this.companieses;
 	}
 
-	public void setCompanieses(Set<Companies> companieses) {
+	public void setCompanieses(Set companieses) {
 		this.companieses = companieses;
 	}
 

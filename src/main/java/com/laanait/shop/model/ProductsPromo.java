@@ -1,6 +1,6 @@
 package com.laanait.shop.model;
-// default package
-// Generated 20 nov. 2011 19:45:07 by Hibernate Tools 3.4.0.CR1
+
+// Generated 20 nov. 2011 22:24:37 by Hibernate Tools 3.4.0.CR1
 
 import java.util.Date;
 import java.util.HashSet;
@@ -11,17 +11,13 @@ import java.util.Set;
  */
 public class ProductsPromo implements java.io.Serializable {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	private Integer promoProductsId;
 	private Products products;
 	private Date promoProductsSDate;
 	private Date promoProductsEDate;
 	private int promoProductsStatus;
 	private Date promoProductsDate;
-	private Set<Logs> logses = new HashSet<Logs>(0);
+	private Set logses = new HashSet(0);
 
 	public ProductsPromo() {
 	}
@@ -38,7 +34,7 @@ public class ProductsPromo implements java.io.Serializable {
 
 	public ProductsPromo(Products products, Date promoProductsSDate,
 			Date promoProductsEDate, int promoProductsStatus,
-			Date promoProductsDate, Set<Logs> logses) {
+			Date promoProductsDate, Set logses) {
 		this.products = products;
 		this.promoProductsSDate = promoProductsSDate;
 		this.promoProductsEDate = promoProductsEDate;
@@ -95,11 +91,11 @@ public class ProductsPromo implements java.io.Serializable {
 		this.promoProductsDate = promoProductsDate;
 	}
 
-	public Set<Logs> getLogses() {
+	public Set getLogses() {
 		return this.logses;
 	}
 
-	public void setLogses(Set<Logs> logses) {
+	public void setLogses(Set logses) {
 		this.logses = logses;
 	}
 

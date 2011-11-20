@@ -1,7 +1,6 @@
 package com.laanait.shop.model;
 
-// default package
-// Generated 20 nov. 2011 19:45:07 by Hibernate Tools 3.4.0.CR1
+// Generated 20 nov. 2011 22:24:37 by Hibernate Tools 3.4.0.CR1
 
 import java.util.HashSet;
 import java.util.Set;
@@ -11,24 +10,20 @@ import java.util.Set;
  */
 public class Categories implements java.io.Serializable {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	private Integer categoryId;
 	private String categoryName;
 	private String categoryDescription;
 	private Integer categoryParent;
-	private Set<ShopsCategories> shopsCategorieses = new HashSet<ShopsCategories>(0);
-	private Set<CompaniesCategories> companiesCategorieses = new HashSet<CompaniesCategories>(0);
-	private Set<Products> productses = new HashSet<Products>(0);
+	private Set shopsCategorieses = new HashSet(0);
+	private Set companiesCategorieses = new HashSet(0);
+	private Set productses = new HashSet(0);
 
 	public Categories() {
 	}
 
 	public Categories(String categoryName, String categoryDescription,
-			Integer categoryParent, Set<ShopsCategories> shopsCategorieses,
-			Set<CompaniesCategories> companiesCategorieses, Set<Products> productses) {
+			Integer categoryParent, Set shopsCategorieses,
+			Set companiesCategorieses, Set productses) {
 		this.categoryName = categoryName;
 		this.categoryDescription = categoryDescription;
 		this.categoryParent = categoryParent;
@@ -69,27 +64,27 @@ public class Categories implements java.io.Serializable {
 		this.categoryParent = categoryParent;
 	}
 
-	public Set<ShopsCategories> getShopsCategorieses() {
+	public Set getShopsCategorieses() {
 		return this.shopsCategorieses;
 	}
 
-	public void setShopsCategorieses(Set<ShopsCategories> shopsCategorieses) {
+	public void setShopsCategorieses(Set shopsCategorieses) {
 		this.shopsCategorieses = shopsCategorieses;
 	}
 
-	public Set<CompaniesCategories> getCompaniesCategorieses() {
+	public Set getCompaniesCategorieses() {
 		return this.companiesCategorieses;
 	}
 
-	public void setCompaniesCategorieses(Set<CompaniesCategories> companiesCategorieses) {
+	public void setCompaniesCategorieses(Set companiesCategorieses) {
 		this.companiesCategorieses = companiesCategorieses;
 	}
 
-	public Set<Products> getProductses() {
+	public Set getProductses() {
 		return this.productses;
 	}
 
-	public void setProductses(Set<Products> productses) {
+	public void setProductses(Set productses) {
 		this.productses = productses;
 	}
 

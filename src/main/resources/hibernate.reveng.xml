@@ -18,8 +18,8 @@
 		match-catalog="shops">
 	</table-filter>
 	<table-filter match-name="products_promo" match-catalog="shops"></table-filter>
-	<table-filter match-name="shops" match-catalog="shops"></table-filter>
 	<table-filter match-name="shops_categories" match-catalog="shops"></table-filter>
 	<table-filter match-name="shops_users" match-catalog="shops"></table-filter>
 	<table-filter match-name="users" match-catalog="shops"></table-filter>
+	<table-filter match-name="shops" match-catalog="shops"></table-filter>
 </hibernate-reverse-engineering>

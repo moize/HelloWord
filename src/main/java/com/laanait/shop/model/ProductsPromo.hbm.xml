@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 20 nov. 2011 19:45:09 by Hibernate Tools 3.4.0.CR1 -->
+<!-- Generated 20 nov. 2011 22:24:37 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="ProductsPromo" table="products_promo" catalog="shops">
+    <class name="com.laanait.shop.model.ProductsPromo" table="products_promo" catalog="shops">
         <id name="promoProductsId" type="java.lang.Integer">
             <column name="promo_products_id" />
             <generator class="identity" />
         </id>
-        <many-to-one name="products" class="Products" fetch="select">
+        <many-to-one name="products" class="com.laanait.shop.model.Products" fetch="select">
             <column name="product_id" not-null="true" />
         </many-to-one>
         <property name="promoProductsSDate" type="date">
@@ -27,7 +27,7 @@
             <key>
                 <column name="promo_products_id" not-null="true" />
             </key>
-            <one-to-many class="Logs" />
+            <one-to-many class="com.laanait.shop.model.Logs" />
         </set>
     </class>
 </hibernate-mapping>

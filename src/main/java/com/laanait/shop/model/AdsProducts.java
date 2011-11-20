@@ -1,7 +1,6 @@
 package com.laanait.shop.model;
 
-// default package
-// Generated 20 nov. 2011 19:45:07 by Hibernate Tools 3.4.0.CR1
+// Generated 20 nov. 2011 22:24:37 by Hibernate Tools 3.4.0.CR1
 
 import java.util.Date;
 
@@ -10,10 +9,6 @@ import java.util.Date;
  */
 public class AdsProducts implements java.io.Serializable {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	private Integer adsProductsId;
 	private Products products;
 	private String adsProductsDescription;

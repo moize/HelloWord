@@ -1,7 +1,6 @@
 package com.laanait.shop.model;
 
-// default package
-// Generated 20 nov. 2011 19:45:07 by Hibernate Tools 3.4.0.CR1
+// Generated 20 nov. 2011 22:24:37 by Hibernate Tools 3.4.0.CR1
 
 import java.util.Date;
 import java.util.HashSet;
@@ -12,10 +11,6 @@ import java.util.Set;
  */
 public class Companies implements java.io.Serializable {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	private Integer companyId;
 	private String companyName;
 	private String companyAddress;
@@ -23,10 +18,10 @@ public class Companies implements java.io.Serializable {
 	private int companyEmail;
 	private Date companyJoinDate;
 	private int companyStatus;
-	private Set<Logs> logses = new HashSet<Logs>(0);
-	private Set<AdsCompanies> adsCompanieses = new HashSet<AdsCompanies>(0);
-	private Set<Users> userses = new HashSet<Users>(0);
-	private Set<CompaniesCategories> companiesCategorieses = new HashSet<CompaniesCategories>(0);
+	private Set logses = new HashSet(0);
+	private Set adsCompanieses = new HashSet(0);
+	private Set userses = new HashSet(0);
+	private Set companiesCategorieses = new HashSet(0);
 
 	public Companies() {
 	}
@@ -44,8 +39,8 @@ public class Companies implements java.io.Serializable {
 
 	public Companies(String companyName, String companyAddress,
 			int companyPhone, int companyEmail, Date companyJoinDate,
-			int companyStatus, Set<Logs> logses, Set<AdsCompanies> adsCompanieses, Set<Users> userses,
-			Set<CompaniesCategories> companiesCategorieses) {
+			int companyStatus, Set logses, Set adsCompanieses, Set userses,
+			Set companiesCategorieses) {
 		this.companyName = companyName;
 		this.companyAddress = companyAddress;
 		this.companyPhone = companyPhone;
@@ -114,35 +109,35 @@ public class Companies implements java.io.Serializable {
 		this.companyStatus = companyStatus;
 	}
 
-	public Set<Logs> getLogses() {
+	public Set getLogses() {
 		return this.logses;
 	}
 
-	public void setLogses(Set<Logs> logses) {
+	public void setLogses(Set logses) {
 		this.logses = logses;
 	}
 
-	public Set<AdsCompanies> getAdsCompanieses() {
+	public Set getAdsCompanieses() {
 		return this.adsCompanieses;
 	}
 
-	public void setAdsCompanieses(Set<AdsCompanies> adsCompanieses) {
+	public void setAdsCompanieses(Set adsCompanieses) {
 		this.adsCompanieses = adsCompanieses;
 	}
 
-	public Set<Users> getUserses() {
+	public Set getUserses() {
 		return this.userses;
 	}
 
-	public void setUserses(Set<Users> userses) {
+	public void setUserses(Set userses) {
 		this.userses = userses;
 	}
 
-	public Set<CompaniesCategories> getCompaniesCategorieses() {
+	public Set getCompaniesCategorieses() {
 		return this.companiesCategorieses;
 	}
 
-	public void setCompaniesCategorieses(Set<CompaniesCategories> companiesCategorieses) {
+	public void setCompaniesCategorieses(Set companiesCategorieses) {
 		this.companiesCategorieses = companiesCategorieses;
 	}
 

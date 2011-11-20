@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 20 nov. 2011 19:45:09 by Hibernate Tools 3.4.0.CR1 -->
+<!-- Generated 20 nov. 2011 22:24:37 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="Products" table="products" catalog="shops">
+    <class name="com.laanait.shop.model.Products" table="products" catalog="shops">
         <id name="productId" type="java.lang.Integer">
             <column name="product_id" />
             <generator class="identity" />
@@ -30,19 +30,19 @@
             <key>
                 <column name="product_id" not-null="true" />
             </key>
-            <one-to-many class="Logs" />
+            <one-to-many class="com.laanait.shop.model.Logs" />
         </set>
         <set name="adsProductses" table="ads_products" inverse="true" lazy="true" fetch="select">
             <key>
                 <column name="products_id" not-null="true" />
             </key>
-            <one-to-many class="AdsProducts" />
+            <one-to-many class="com.laanait.shop.model.AdsProducts" />
         </set>
         <set name="categorieses" table="products_categories" inverse="false" lazy="true" fetch="select">
             <key>
                 <column name="product_id" not-null="true" />
             </key>
-            <many-to-many entity-name="Categories">
+            <many-to-many entity-name="com.laanait.shop.model.Categories">
                 <column name="category_id" not-null="true" />
             </many-to-many>
         </set>
@@ -50,7 +50,7 @@
             <key>
                 <column name="product_id" not-null="true" />
             </key>
-            <one-to-many class="ProductsPromo" />
+            <one-to-many class="com.laanait.shop.model.ProductsPromo" />
         </set>
     </class>
 </hibernate-mapping>

@@ -1,6 +1,6 @@
 package com.laanait.shop.model;
-// default package
-// Generated 20 nov. 2011 19:45:07 by Hibernate Tools 3.4.0.CR1
+
+// Generated 20 nov. 2011 22:24:37 by Hibernate Tools 3.4.0.CR1
 
 import java.util.Date;
 import java.util.HashSet;
@@ -11,10 +11,6 @@ import java.util.Set;
  */
 public class Shops implements java.io.Serializable {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	private Integer shopId;
 	private String shopName;
 	private String shopDescription;
@@ -23,17 +19,17 @@ public class Shops implements java.io.Serializable {
 	private String shopCity;
 	private String shopCountry;
 	private String shopLat;
-	private String lshopOn;
+	private String shopLon;
 	private String shopPhone;
 	private String shopFax;
 	private String shopEmail;
 	private String shopWebsite;
 	private Date shopJoinDate;
 	private int shopStatus;
-	private Set<Logs> logses = new HashSet<Logs>(0);
-	private Set<Users> userses = new HashSet<Users>(0);
-	private Set<ShopsCategories> shopsCategorieses = new HashSet<ShopsCategories>(0);
-	private Set<AdsShops> adsShopses = new HashSet<AdsShops>(0);
+	private Set logses = new HashSet(0);
+	private Set userses = new HashSet(0);
+	private Set shopsCategorieses = new HashSet(0);
+	private Set adsShopses = new HashSet(0);
 
 	public Shops() {
 	}
@@ -45,10 +41,10 @@ public class Shops implements java.io.Serializable {
 
 	public Shops(String shopName, String shopDescription, String shopAddress,
 			String shopZip, String shopCity, String shopCountry,
-			String shopLat, String lshopOn, String shopPhone, String shopFax,
+			String shopLat, String shopLon, String shopPhone, String shopFax,
 			String shopEmail, String shopWebsite, Date shopJoinDate,
-			int shopStatus, Set<Logs> logses, Set<Users> userses, Set<ShopsCategories> shopsCategorieses,
-			Set<AdsShops> adsShopses) {
+			int shopStatus, Set logses, Set userses, Set shopsCategorieses,
+			Set adsShopses) {
 		this.shopName = shopName;
 		this.shopDescription = shopDescription;
 		this.shopAddress = shopAddress;
@@ -56,7 +52,7 @@ public class Shops implements java.io.Serializable {
 		this.shopCity = shopCity;
 		this.shopCountry = shopCountry;
 		this.shopLat = shopLat;
-		this.lshopOn = lshopOn;
+		this.shopLon = shopLon;
 		this.shopPhone = shopPhone;
 		this.shopFax = shopFax;
 		this.shopEmail = shopEmail;
@@ -133,12 +129,12 @@ public class Shops implements java.io.Serializable {
 		this.shopLat = shopLat;
 	}
 
-	public String getLshopOn() {
-		return this.lshopOn;
+	public String getShopLon() {
+		return this.shopLon;
 	}
 
-	public void setLshopOn(String lshopOn) {
-		this.lshopOn = lshopOn;
+	public void setShopLon(String shopLon) {
+		this.shopLon = shopLon;
 	}
 
 	public String getShopPhone() {
@@ -189,35 +185,35 @@ public class Shops implements java.io.Serializable {
 		this.shopStatus = shopStatus;
 	}
 
-	public Set<Logs> getLogses() {
+	public Set getLogses() {
 		return this.logses;
 	}
 
-	public void setLogses(Set<Logs> logses) {
+	public void setLogses(Set logses) {
 		this.logses = logses;
 	}
 
-	public Set<Users> getUserses() {
+	public Set getUserses() {
 		return this.userses;
 	}
 
-	public void setUserses(Set<Users> userses) {
+	public void setUserses(Set userses) {
 		this.userses = userses;
 	}
 
-	public Set<ShopsCategories> getShopsCategorieses() {
+	public Set getShopsCategorieses() {
 		return this.shopsCategorieses;
 	}
 
-	public void setShopsCategorieses(Set<ShopsCategories> shopsCategorieses) {
+	public void setShopsCategorieses(Set shopsCategorieses) {
 		this.shopsCategorieses = shopsCategorieses;
 	}
 
-	public Set<AdsShops> getAdsShopses() {
+	public Set getAdsShopses() {
 		return this.adsShopses;
 	}
 
-	public void setAdsShopses(Set<AdsShops> adsShopses) {
+	public void setAdsShopses(Set adsShopses) {
 		this.adsShopses = adsShopses;
 	}
 

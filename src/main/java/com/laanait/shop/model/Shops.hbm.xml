@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 20 nov. 2011 19:45:09 by Hibernate Tools 3.4.0.CR1 -->
+<!-- Generated 20 nov. 2011 22:24:37 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="Shops" table="shops" catalog="shops">
+    <class name="com.laanait.shop.model.Shops" table="shops" catalog="shops">
         <id name="shopId" type="java.lang.Integer">
             <column name="shop_id" />
             <generator class="identity" />
@@ -29,8 +29,8 @@
         <property name="shopLat" type="string">
             <column name="shop_lat" length="20" />
         </property>
-        <property name="lshopOn" type="string">
-            <column name="lshop_on" length="20" />
+        <property name="shopLon" type="string">
+            <column name="shop_lon" length="20" />
         </property>
         <property name="shopPhone" type="string">
             <column name="shop_phone" length="20" />
@@ -54,13 +54,13 @@
             <key>
                 <column name="shop_id" not-null="true" />
             </key>
-            <one-to-many class="Logs" />
+            <one-to-many class="com.laanait.shop.model.Logs" />
         </set>
         <set name="userses" table="shops_users" inverse="false" lazy="true" fetch="select">
             <key>
                 <column name="shop_id" not-null="true" />
             </key>
-            <many-to-many entity-name="Users">
+            <many-to-many entity-name="com.laanait.shop.model.Users">
                 <column name="user_id" not-null="true" />
             </many-to-many>
         </set>
@@ -68,13 +68,13 @@
             <key>
                 <column name="shop_id" not-null="true" />
             </key>
-            <one-to-many class="ShopsCategories" />
+            <one-to-many class="com.laanait.shop.model.ShopsCategories" />
         </set>
         <set name="adsShopses" table="ads_shops" inverse="true" lazy="true" fetch="select">
             <key>
                 <column name="shop_id" not-null="true" />
             </key>
-            <one-to-many class="AdsShops" />
+            <one-to-many class="com.laanait.shop.model.AdsShops" />
         </set>
     </class>
 </hibernate-mapping>

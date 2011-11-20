@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 20 nov. 2011 19:45:09 by Hibernate Tools 3.4.0.CR1 -->
+<!-- Generated 20 nov. 2011 22:24:37 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="Logs" table="logs" catalog="shops">
-        <composite-id name="id" class="LogsId">
+    <class name="com.laanait.shop.model.Logs" table="logs" catalog="shops">
+        <composite-id name="id" class="com.laanait.shop.model.LogsId">
             <key-property name="logId" type="int">
                 <column name="log_id" />
             </key-property>
@@ -33,19 +33,19 @@
                 <column name="promo_products_id" />
             </key-property>
         </composite-id>
-        <many-to-one name="shops" class="Shops" update="false" insert="false" fetch="select">
+        <many-to-one name="shops" class="com.laanait.shop.model.Shops" update="false" insert="false" fetch="select">
             <column name="shop_id" not-null="true" />
         </many-to-one>
-        <many-to-one name="users" class="Users" update="false" insert="false" fetch="select">
+        <many-to-one name="users" class="com.laanait.shop.model.Users" update="false" insert="false" fetch="select">
             <column name="user_id" not-null="true" />
         </many-to-one>
-        <many-to-one name="products" class="Products" update="false" insert="false" fetch="select">
+        <many-to-one name="products" class="com.laanait.shop.model.Products" update="false" insert="false" fetch="select">
             <column name="product_id" not-null="true" />
         </many-to-one>
-        <many-to-one name="companies" class="Companies" update="false" insert="false" fetch="select">
+        <many-to-one name="companies" class="com.laanait.shop.model.Companies" update="false" insert="false" fetch="select">
             <column name="company_id" not-null="true" />
         </many-to-one>
-        <many-to-one name="productsPromo" class="ProductsPromo" update="false" insert="false" fetch="select">
+        <many-to-one name="productsPromo" class="com.laanait.shop.model.ProductsPromo" update="false" insert="false" fetch="select">
             <column name="promo_products_id" not-null="true" />
         </many-to-one>
     </class>

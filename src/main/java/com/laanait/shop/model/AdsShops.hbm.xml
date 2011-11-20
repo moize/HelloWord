@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 20 nov. 2011 19:45:09 by Hibernate Tools 3.4.0.CR1 -->
+<!-- Generated 20 nov. 2011 22:24:37 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="AdsShops" table="ads_shops" catalog="shops">
+    <class name="com.laanait.shop.model.AdsShops" table="ads_shops" catalog="shops">
         <id name="adsShopsId" type="java.lang.Integer">
             <column name="ads_shops_id" />
             <generator class="identity" />
         </id>
-        <many-to-one name="shops" class="Shops" fetch="select">
+        <many-to-one name="shops" class="com.laanait.shop.model.Shops" fetch="select">
             <column name="shop_id" not-null="true" />
         </many-to-one>
         <property name="adsShopsDescription" type="string">

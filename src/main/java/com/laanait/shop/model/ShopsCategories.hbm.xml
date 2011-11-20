@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 20 nov. 2011 19:45:09 by Hibernate Tools 3.4.0.CR1 -->
+<!-- Generated 20 nov. 2011 22:24:37 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="CompaniesCategories" table="companies_categories" catalog="shops">
-        <composite-id name="id" class="CompaniesCategoriesId">
-            <key-property name="companyId" type="int">
-                <column name="company_id" />
+    <class name="com.laanait.shop.model.ShopsCategories" table="shops_categories" catalog="shops">
+        <composite-id name="id" class="com.laanait.shop.model.ShopsCategoriesId">
+            <key-property name="shopId" type="int">
+                <column name="shop_id" />
             </key-property>
             <key-property name="categoryId" type="int">
                 <column name="category_id" />
@@ -15,10 +15,10 @@
                 <column name="categories_category_id" />
             </key-property>
         </composite-id>
-        <many-to-one name="companies" class="Companies" update="false" insert="false" fetch="select">
-            <column name="company_id" not-null="true" />
+        <many-to-one name="shops" class="com.laanait.shop.model.Shops" update="false" insert="false" fetch="select">
+            <column name="shop_id" not-null="true" />
         </many-to-one>
-        <many-to-one name="categories" class="Categories" update="false" insert="false" fetch="select">
+        <many-to-one name="categories" class="com.laanait.shop.model.Categories" update="false" insert="false" fetch="select">
             <column name="categories_category_id" not-null="true" />
         </many-to-one>
     </class>

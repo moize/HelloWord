@@ -1,7 +1,6 @@
 package com.laanait.shop.model;
 
-// default package
-// Generated 20 nov. 2011 19:45:07 by Hibernate Tools 3.4.0.CR1
+// Generated 20 nov. 2011 22:24:37 by Hibernate Tools 3.4.0.CR1
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -13,10 +12,6 @@ import java.util.Set;
  */
 public class Products implements java.io.Serializable {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	private Integer productId;
 	private String productName;
 	private String productDescription;
@@ -24,10 +19,10 @@ public class Products implements java.io.Serializable {
 	private BigDecimal productPrice;
 	private int productShop;
 	private Date productDate;
-	private Set<Logs> logses = new HashSet<Logs>(0);
-	private Set<AdsProducts> adsProductses = new HashSet<AdsProducts>(0);
-	private Set<Categories> categorieses = new HashSet<Categories>(0);
-	private Set<ProductsPromo> productsPromos = new HashSet<ProductsPromo>(0);
+	private Set logses = new HashSet(0);
+	private Set adsProductses = new HashSet(0);
+	private Set categorieses = new HashSet(0);
+	private Set productsPromos = new HashSet(0);
 
 	public Products() {
 	}
@@ -39,8 +34,8 @@ public class Products implements java.io.Serializable {
 
 	public Products(String productName, String productDescription,
 			String productImage, BigDecimal productPrice, int productShop,
-			Date productDate, Set<Logs> logses, Set<AdsProducts> adsProductses, Set<Categories> categorieses,
-			Set<ProductsPromo> productsPromos) {
+			Date productDate, Set logses, Set adsProductses, Set categorieses,
+			Set productsPromos) {
 		this.productName = productName;
 		this.productDescription = productDescription;
 		this.productImage = productImage;
@@ -109,35 +104,35 @@ public class Products implements java.io.Serializable {
 		this.productDate = productDate;
 	}
 
-	public Set<Logs> getLogses() {
+	public Set getLogses() {
 		return this.logses;
 	}
 
-	public void setLogses(Set<Logs> logses) {
+	public void setLogses(Set logses) {
 		this.logses = logses;
 	}
 
-	public Set<AdsProducts> getAdsProductses() {
+	public Set getAdsProductses() {
 		return this.adsProductses;
 	}
 
-	public void setAdsProductses(Set<AdsProducts> adsProductses) {
+	public void setAdsProductses(Set adsProductses) {
 		this.adsProductses = adsProductses;
 	}
 
-	public Set<Categories> getCategorieses() {
+	public Set getCategorieses() {
 		return this.categorieses;
 	}
 
-	public void setCategorieses(Set<Categories> categorieses) {
+	public void setCategorieses(Set categorieses) {
 		this.categorieses = categorieses;
 	}
 
-	public Set<ProductsPromo> getProductsPromos() {
+	public Set getProductsPromos() {
 		return this.productsPromos;
 	}
 
-	public void setProductsPromos(Set<ProductsPromo> productsPromos) {
+	public void setProductsPromos(Set productsPromos) {
 		this.productsPromos = productsPromos;
 	}
 
