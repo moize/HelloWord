@@ -9,6 +9,10 @@ import java.util.Date;
  */
 public class AdsProducts implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Integer adsProductsId;
 	private Products products;
 	private String adsProductsDescription;

@@ -7,6 +7,10 @@ package com.laanait.shop.model;
  */
 public class ShopsCategories implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private ShopsCategoriesId id;
 	private Shops shops;
 	private Categories categories;

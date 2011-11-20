@@ -11,13 +11,17 @@ import java.util.Set;
  */
 public class ProductsPromo implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Integer promoProductsId;
 	private Products products;
 	private Date promoProductsSDate;
 	private Date promoProductsEDate;
 	private int promoProductsStatus;
 	private Date promoProductsDate;
-	private Set logses = new HashSet(0);
+	private Set<?> logses = new HashSet<Object>(0);
 
 	public ProductsPromo() {
 	}
@@ -34,7 +38,7 @@ public class ProductsPromo implements java.io.Serializable {
 
 	public ProductsPromo(Products products, Date promoProductsSDate,
 			Date promoProductsEDate, int promoProductsStatus,
-			Date promoProductsDate, Set logses) {
+			Date promoProductsDate, Set<?> logses) {
 		this.products = products;
 		this.promoProductsSDate = promoProductsSDate;
 		this.promoProductsEDate = promoProductsEDate;
@@ -91,11 +95,11 @@ public class ProductsPromo implements java.io.Serializable {
 		this.promoProductsDate = promoProductsDate;
 	}
 
-	public Set getLogses() {
+	public Set<?> getLogses() {
 		return this.logses;
 	}
 
-	public void setLogses(Set logses) {
+	public void setLogses(Set<?> logses) {
 		this.logses = logses;
 	}
 

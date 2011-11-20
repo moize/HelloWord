@@ -11,6 +11,10 @@ import java.util.Set;
  */
 public class Companies implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Integer companyId;
 	private String companyName;
 	private String companyAddress;
@@ -18,10 +22,10 @@ public class Companies implements java.io.Serializable {
 	private int companyEmail;
 	private Date companyJoinDate;
 	private int companyStatus;
-	private Set logses = new HashSet(0);
-	private Set adsCompanieses = new HashSet(0);
-	private Set userses = new HashSet(0);
-	private Set companiesCategorieses = new HashSet(0);
+	private Set<?> logses = new HashSet<Object>(0);
+	private Set<?> adsCompanieses = new HashSet<Object>(0);
+	private Set<?> userses = new HashSet<Object>(0);
+	private Set<?> companiesCategorieses = new HashSet<Object>(0);
 
 	public Companies() {
 	}
@@ -39,8 +43,8 @@ public class Companies implements java.io.Serializable {
 
 	public Companies(String companyName, String companyAddress,
 			int companyPhone, int companyEmail, Date companyJoinDate,
-			int companyStatus, Set logses, Set adsCompanieses, Set userses,
-			Set companiesCategorieses) {
+			int companyStatus, Set<?> logses, Set<?> adsCompanieses, Set<?> userses,
+			Set<?> companiesCategorieses) {
 		this.companyName = companyName;
 		this.companyAddress = companyAddress;
 		this.companyPhone = companyPhone;
@@ -109,35 +113,35 @@ public class Companies implements java.io.Serializable {
 		this.companyStatus = companyStatus;
 	}
 
-	public Set getLogses() {
+	public Set<?> getLogses() {
 		return this.logses;
 	}
 
-	public void setLogses(Set logses) {
+	public void setLogses(Set<?> logses) {
 		this.logses = logses;
 	}
 
-	public Set getAdsCompanieses() {
+	public Set<?> getAdsCompanieses() {
 		return this.adsCompanieses;
 	}
 
-	public void setAdsCompanieses(Set adsCompanieses) {
+	public void setAdsCompanieses(Set<?> adsCompanieses) {
 		this.adsCompanieses = adsCompanieses;
 	}
 
-	public Set getUserses() {
+	public Set<?> getUserses() {
 		return this.userses;
 	}
 
-	public void setUserses(Set userses) {
+	public void setUserses(Set<?> userses) {
 		this.userses = userses;
 	}
 
-	public Set getCompaniesCategorieses() {
+	public Set<?> getCompaniesCategorieses() {
 		return this.companiesCategorieses;
 	}
 
-	public void setCompaniesCategorieses(Set companiesCategorieses) {
+	public void setCompaniesCategorieses(Set<?> companiesCategorieses) {
 		this.companiesCategorieses = companiesCategorieses;
 	}
 

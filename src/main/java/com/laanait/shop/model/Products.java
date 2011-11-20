@@ -12,6 +12,10 @@ import java.util.Set;
  */
 public class Products implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Integer productId;
 	private String productName;
 	private String productDescription;
@@ -19,10 +23,10 @@ public class Products implements java.io.Serializable {
 	private BigDecimal productPrice;
 	private int productShop;
 	private Date productDate;
-	private Set logses = new HashSet(0);
-	private Set adsProductses = new HashSet(0);
-	private Set categorieses = new HashSet(0);
-	private Set productsPromos = new HashSet(0);
+	private Set<?> logses = new HashSet<Object>(0);
+	private Set<?> adsProductses = new HashSet<Object>(0);
+	private Set<?> categorieses = new HashSet<Object>(0);
+	private Set<?> productsPromos = new HashSet<Object>(0);
 
 	public Products() {
 	}
@@ -34,8 +38,8 @@ public class Products implements java.io.Serializable {
 
 	public Products(String productName, String productDescription,
 			String productImage, BigDecimal productPrice, int productShop,
-			Date productDate, Set logses, Set adsProductses, Set categorieses,
-			Set productsPromos) {
+			Date productDate, Set<?> logses, Set<?> adsProductses, Set<?> categorieses,
+			Set<?> productsPromos) {
 		this.productName = productName;
 		this.productDescription = productDescription;
 		this.productImage = productImage;
@@ -104,35 +108,35 @@ public class Products implements java.io.Serializable {
 		this.productDate = productDate;
 	}
 
-	public Set getLogses() {
+	public Set<?> getLogses() {
 		return this.logses;
 	}
 
-	public void setLogses(Set logses) {
+	public void setLogses(Set<?> logses) {
 		this.logses = logses;
 	}
 
-	public Set getAdsProductses() {
+	public Set<?> getAdsProductses() {
 		return this.adsProductses;
 	}
 
-	public void setAdsProductses(Set adsProductses) {
+	public void setAdsProductses(Set<?> adsProductses) {
 		this.adsProductses = adsProductses;
 	}
 
-	public Set getCategorieses() {
+	public Set<?> getCategorieses() {
 		return this.categorieses;
 	}
 
-	public void setCategorieses(Set categorieses) {
+	public void setCategorieses(Set<?> categorieses) {
 		this.categorieses = categorieses;
 	}
 
-	public Set getProductsPromos() {
+	public Set<?> getProductsPromos() {
 		return this.productsPromos;
 	}
 
-	public void setProductsPromos(Set productsPromos) {
+	public void setProductsPromos(Set<?> productsPromos) {
 		this.productsPromos = productsPromos;
 	}
 

@@ -10,20 +10,24 @@ import java.util.Set;
  */
 public class Categories implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Integer categoryId;
 	private String categoryName;
 	private String categoryDescription;
 	private Integer categoryParent;
-	private Set shopsCategorieses = new HashSet(0);
-	private Set companiesCategorieses = new HashSet(0);
-	private Set productses = new HashSet(0);
+	private Set<?> shopsCategorieses = new HashSet<Object>(0);
+	private Set<?> companiesCategorieses = new HashSet<Object>(0);
+	private Set<?> productses = new HashSet<Object>(0);
 
 	public Categories() {
 	}
 
 	public Categories(String categoryName, String categoryDescription,
-			Integer categoryParent, Set shopsCategorieses,
-			Set companiesCategorieses, Set productses) {
+			Integer categoryParent, Set<?> shopsCategorieses,
+			Set<?> companiesCategorieses, Set<?> productses) {
 		this.categoryName = categoryName;
 		this.categoryDescription = categoryDescription;
 		this.categoryParent = categoryParent;
@@ -64,27 +68,27 @@ public class Categories implements java.io.Serializable {
 		this.categoryParent = categoryParent;
 	}
 
-	public Set getShopsCategorieses() {
+	public Set<?> getShopsCategorieses() {
 		return this.shopsCategorieses;
 	}
 
-	public void setShopsCategorieses(Set shopsCategorieses) {
+	public void setShopsCategorieses(Set<?> shopsCategorieses) {
 		this.shopsCategorieses = shopsCategorieses;
 	}
 
-	public Set getCompaniesCategorieses() {
+	public Set<?> getCompaniesCategorieses() {
 		return this.companiesCategorieses;
 	}
 
-	public void setCompaniesCategorieses(Set companiesCategorieses) {
+	public void setCompaniesCategorieses(Set<?> companiesCategorieses) {
 		this.companiesCategorieses = companiesCategorieses;
 	}
 
-	public Set getProductses() {
+	public Set<?> getProductses() {
 		return this.productses;
 	}
 
-	public void setProductses(Set productses) {
+	public void setProductses(Set<?> productses) {
 		this.productses = productses;
 	}
 

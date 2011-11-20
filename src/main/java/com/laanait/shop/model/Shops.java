@@ -11,6 +11,10 @@ import java.util.Set;
  */
 public class Shops implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Integer shopId;
 	private String shopName;
 	private String shopDescription;
@@ -26,10 +30,10 @@ public class Shops implements java.io.Serializable {
 	private String shopWebsite;
 	private Date shopJoinDate;
 	private int shopStatus;
-	private Set logses = new HashSet(0);
-	private Set userses = new HashSet(0);
-	private Set shopsCategorieses = new HashSet(0);
-	private Set adsShopses = new HashSet(0);
+	private Set<?> logses = new HashSet<Object>(0);
+	private Set<?> userses = new HashSet<Object>(0);
+	private Set<?> shopsCategorieses = new HashSet<Object>(0);
+	private Set<?> adsShopses = new HashSet<Object>(0);
 
 	public Shops() {
 	}
@@ -43,8 +47,8 @@ public class Shops implements java.io.Serializable {
 			String shopZip, String shopCity, String shopCountry,
 			String shopLat, String shopLon, String shopPhone, String shopFax,
 			String shopEmail, String shopWebsite, Date shopJoinDate,
-			int shopStatus, Set logses, Set userses, Set shopsCategorieses,
-			Set adsShopses) {
+			int shopStatus, Set<?> logses, Set<?> userses, Set<?> shopsCategorieses,
+			Set<?> adsShopses) {
 		this.shopName = shopName;
 		this.shopDescription = shopDescription;
 		this.shopAddress = shopAddress;
@@ -185,35 +189,35 @@ public class Shops implements java.io.Serializable {
 		this.shopStatus = shopStatus;
 	}
 
-	public Set getLogses() {
+	public Set<?> getLogses() {
 		return this.logses;
 	}
 
-	public void setLogses(Set logses) {
+	public void setLogses(Set<?> logses) {
 		this.logses = logses;
 	}
 
-	public Set getUserses() {
+	public Set<?> getUserses() {
 		return this.userses;
 	}
 
-	public void setUserses(Set userses) {
+	public void setUserses(Set<?> userses) {
 		this.userses = userses;
 	}
 
-	public Set getShopsCategorieses() {
+	public Set<?> getShopsCategorieses() {
 		return this.shopsCategorieses;
 	}
 
-	public void setShopsCategorieses(Set shopsCategorieses) {
+	public void setShopsCategorieses(Set<?> shopsCategorieses) {
 		this.shopsCategorieses = shopsCategorieses;
 	}
 
-	public Set getAdsShopses() {
+	public Set<?> getAdsShopses() {
 		return this.adsShopses;
 	}
 
-	public void setAdsShopses(Set adsShopses) {
+	public void setAdsShopses(Set<?> adsShopses) {
 		this.adsShopses = adsShopses;
 	}
 

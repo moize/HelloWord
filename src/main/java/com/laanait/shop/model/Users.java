@@ -10,12 +10,16 @@ import java.util.Set;
  */
 public class Users implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Integer userId;
 	private String userEmail;
 	private String userPassword;
-	private Set logses = new HashSet(0);
-	private Set shopses = new HashSet(0);
-	private Set companieses = new HashSet(0);
+	private Set<?> logses = new HashSet<Object>(0);
+	private Set<?> shopses = new HashSet<Object>(0);
+	private Set<?> companieses = new HashSet<Object>(0);
 
 	public Users() {
 	}
@@ -25,8 +29,8 @@ public class Users implements java.io.Serializable {
 		this.userPassword = userPassword;
 	}
 
-	public Users(String userEmail, String userPassword, Set logses,
-			Set shopses, Set companieses) {
+	public Users(String userEmail, String userPassword, Set<?> logses,
+			Set<?> shopses, Set<?> companieses) {
 		this.userEmail = userEmail;
 		this.userPassword = userPassword;
 		this.logses = logses;
@@ -58,27 +62,27 @@ public class Users implements java.io.Serializable {
 		this.userPassword = userPassword;
 	}
 
-	public Set getLogses() {
+	public Set<?> getLogses() {
 		return this.logses;
 	}
 
-	public void setLogses(Set logses) {
+	public void setLogses(Set<?> logses) {
 		this.logses = logses;
 	}
 
-	public Set getShopses() {
+	public Set<?> getShopses() {
 		return this.shopses;
 	}
 
-	public void setShopses(Set shopses) {
+	public void setShopses(Set<?> shopses) {
 		this.shopses = shopses;
 	}
 
-	public Set getCompanieses() {
+	public Set<?> getCompanieses() {
 		return this.companieses;
 	}
 
-	public void setCompanieses(Set companieses) {
+	public void setCompanieses(Set<?> companieses) {
 		this.companieses = companieses;
 	}
 
