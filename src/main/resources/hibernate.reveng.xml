@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table-filter match-name="ads" match-catalog="shops"></table-filter>
+	<table-filter match-name="ads_companies" match-catalog="shops"></table-filter>
+	<table-filter match-name="ads_products" match-catalog="shops"></table-filter>
+	<table-filter match-name="ads_shops" match-catalog="shops"></table-filter>
+	<table-filter match-name="categories" match-catalog="shops"></table-filter>
+	<table-filter match-name="companies" match-catalog="shops"></table-filter>
+	<table-filter match-name="companies_categories"
+		match-catalog="shops">
+	</table-filter>
+	<table-filter match-name="companies_users" match-catalog="shops"></table-filter>
+	<table-filter match-name="logs" match-catalog="shops"></table-filter>
+	<table-filter match-name="products" match-catalog="shops"></table-filter>
+	<table-filter match-name="products_categories"
+		match-catalog="shops">
+	</table-filter>
+	<table-filter match-name="products_promo" match-catalog="shops"></table-filter>
+	<table-filter match-name="shops" match-catalog="shops"></table-filter>
+	<table-filter match-name="shops_categories" match-catalog="shops"></table-filter>
+	<table-filter match-name="shops_users" match-catalog="shops"></table-filter>
+	<table-filter match-name="users" match-catalog="shops"></table-filter>
+</hibernate-reverse-engineering>

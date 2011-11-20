@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 20 nov. 2011 19:45:09 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="Logs" table="logs" catalog="shops">
+        <composite-id name="id" class="LogsId">
+            <key-property name="logId" type="int">
+                <column name="log_id" />
+            </key-property>
+            <key-property name="logName" type="string">
+                <column name="log_name" length="30" />
+            </key-property>
+            <key-property name="logDescription" type="int">
+                <column name="log_description" />
+            </key-property>
+            <key-property name="logDate" type="date">
+                <column name="log_date" length="10" />
+            </key-property>
+            <key-property name="userId" type="int">
+                <column name="user_id" />
+            </key-property>
+            <key-property name="companyId" type="int">
+                <column name="company_id" />
+            </key-property>
+            <key-property name="shopId" type="int">
+                <column name="shop_id" />
+            </key-property>
+            <key-property name="productId" type="int">
+                <column name="product_id" />
+            </key-property>
+            <key-property name="promoProductsId" type="int">
+                <column name="promo_products_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="shops" class="Shops" update="false" insert="false" fetch="select">
+            <column name="shop_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="users" class="Users" update="false" insert="false" fetch="select">
+            <column name="user_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="products" class="Products" update="false" insert="false" fetch="select">
+            <column name="product_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="companies" class="Companies" update="false" insert="false" fetch="select">
+            <column name="company_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="productsPromo" class="ProductsPromo" update="false" insert="false" fetch="select">
+            <column name="promo_products_id" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

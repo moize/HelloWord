@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 20 nov. 2011 19:45:09 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="Shops" table="shops" catalog="shops">
+        <id name="shopId" type="java.lang.Integer">
+            <column name="shop_id" />
+            <generator class="identity" />
+        </id>
+        <property name="shopName" type="string">
+            <column name="shop_name" length="50" />
+        </property>
+        <property name="shopDescription" type="string">
+            <column name="shop_description" length="250" />
+        </property>
+        <property name="shopAddress" type="string">
+            <column name="shop_address" length="150" />
+        </property>
+        <property name="shopZip" type="string">
+            <column name="shop_zip" length="45" />
+        </property>
+        <property name="shopCity" type="string">
+            <column name="shop_city" length="45" />
+        </property>
+        <property name="shopCountry" type="string">
+            <column name="shop_country" length="45" />
+        </property>
+        <property name="shopLat" type="string">
+            <column name="shop_lat" length="20" />
+        </property>
+        <property name="lshopOn" type="string">
+            <column name="lshop_on" length="20" />
+        </property>
+        <property name="shopPhone" type="string">
+            <column name="shop_phone" length="20" />
+        </property>
+        <property name="shopFax" type="string">
+            <column name="shop_fax" length="20" />
+        </property>
+        <property name="shopEmail" type="string">
+            <column name="shop_email" length="45" />
+        </property>
+        <property name="shopWebsite" type="string">
+            <column name="shop_website" length="45" />
+        </property>
+        <property name="shopJoinDate" type="date">
+            <column name="shop_join_date" length="10" not-null="true" />
+        </property>
+        <property name="shopStatus" type="int">
+            <column name="shop_status" not-null="true" />
+        </property>
+        <set name="logses" table="logs" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="shop_id" not-null="true" />
+            </key>
+            <one-to-many class="Logs" />
+        </set>
+        <set name="userses" table="shops_users" inverse="false" lazy="true" fetch="select">
+            <key>
+                <column name="shop_id" not-null="true" />
+            </key>
+            <many-to-many entity-name="Users">
+                <column name="user_id" not-null="true" />
+            </many-to-many>
+        </set>
+        <set name="shopsCategorieses" table="shops_categories" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="shop_id" not-null="true" />
+            </key>
+            <one-to-many class="ShopsCategories" />
+        </set>
+        <set name="adsShopses" table="ads_shops" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="shop_id" not-null="true" />
+            </key>
+            <one-to-many class="AdsShops" />
+        </set>
+    </class>
+</hibernate-mapping>

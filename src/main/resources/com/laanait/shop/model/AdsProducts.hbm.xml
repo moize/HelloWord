@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 20 nov. 2011 19:45:09 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="AdsProducts" table="ads_products" catalog="shops">
+        <id name="adsProductsId" type="java.lang.Integer">
+            <column name="ads_products_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="products" class="Products" fetch="select">
+            <column name="products_id" not-null="true" />
+        </many-to-one>
+        <property name="adsProductsDescription" type="string">
+            <column name="ads_products_description" length="200" not-null="true" />
+        </property>
+        <property name="adsProductsImage" type="string">
+            <column name="ads_products_image" length="200" not-null="true" />
+        </property>
+        <property name="adsProductsCategory" type="int">
+            <column name="ads_products_category" not-null="true" />
+        </property>
+        <property name="adsProductsSDate" type="date">
+            <column name="ads_products_s_date" length="10" not-null="true" />
+        </property>
+        <property name="adsProductsEDate" type="date">
+            <column name="ads_products_e_date" length="10" not-null="true" />
+        </property>
+        <property name="adsProductsStatus" type="int">
+            <column name="ads_products_status" not-null="true" />
+        </property>
+        <property name="adsProductsDate" type="date">
+            <column name="ads_products_date" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

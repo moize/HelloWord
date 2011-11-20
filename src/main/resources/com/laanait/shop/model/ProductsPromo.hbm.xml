@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 20 nov. 2011 19:45:09 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="ProductsPromo" table="products_promo" catalog="shops">
+        <id name="promoProductsId" type="java.lang.Integer">
+            <column name="promo_products_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="products" class="Products" fetch="select">
+            <column name="product_id" not-null="true" />
+        </many-to-one>
+        <property name="promoProductsSDate" type="date">
+            <column name="promo_products_s_date" length="10" not-null="true" />
+        </property>
+        <property name="promoProductsEDate" type="date">
+            <column name="promo_products_e_date" length="10" not-null="true" />
+        </property>
+        <property name="promoProductsStatus" type="int">
+            <column name="promo_products_status" not-null="true" />
+        </property>
+        <property name="promoProductsDate" type="date">
+            <column name="promo_products_date" length="10" not-null="true" />
+        </property>
+        <set name="logses" table="logs" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="promo_products_id" not-null="true" />
+            </key>
+            <one-to-many class="Logs" />
+        </set>
+    </class>
+</hibernate-mapping>
