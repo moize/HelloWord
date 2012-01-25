@@ -1,6 +1,6 @@
 package com.laanait.shop.model;
 
-// Generated 20 nov. 2011 22:24:37 by Hibernate Tools 3.4.0.CR1
+// Generated 25 janv. 2012 13:59:40 by Hibernate Tools 3.4.0.CR1
 
 import java.util.Date;
 
@@ -110,47 +110,6 @@ public class LogsId implements java.io.Serializable {
 
 	public void setPromoProductsId(int promoProductsId) {
 		this.promoProductsId = promoProductsId;
-	}
-
-	public boolean equals(Object other) {
-		if ((this == other))
-			return true;
-		if ((other == null))
-			return false;
-		if (!(other instanceof LogsId))
-			return false;
-		LogsId castOther = (LogsId) other;
-
-		return (this.getLogId() == castOther.getLogId())
-				&& ((this.getLogName() == castOther.getLogName()) || (this
-						.getLogName() != null && castOther.getLogName() != null && this
-						.getLogName().equals(castOther.getLogName())))
-				&& (this.getLogDescription() == castOther.getLogDescription())
-				&& ((this.getLogDate() == castOther.getLogDate()) || (this
-						.getLogDate() != null && castOther.getLogDate() != null && this
-						.getLogDate().equals(castOther.getLogDate())))
-				&& (this.getUserId() == castOther.getUserId())
-				&& (this.getCompanyId() == castOther.getCompanyId())
-				&& (this.getShopId() == castOther.getShopId())
-				&& (this.getProductId() == castOther.getProductId())
-				&& (this.getPromoProductsId() == castOther.getPromoProductsId());
-	}
-
-	public int hashCode() {
-		int result = 17;
-
-		result = 37 * result + this.getLogId();
-		result = 37 * result
-				+ (getLogName() == null ? 0 : this.getLogName().hashCode());
-		result = 37 * result + this.getLogDescription();
-		result = 37 * result
-				+ (getLogDate() == null ? 0 : this.getLogDate().hashCode());
-		result = 37 * result + this.getUserId();
-		result = 37 * result + this.getCompanyId();
-		result = 37 * result + this.getShopId();
-		result = 37 * result + this.getProductId();
-		result = 37 * result + this.getPromoProductsId();
-		return result;
 	}
 
 }

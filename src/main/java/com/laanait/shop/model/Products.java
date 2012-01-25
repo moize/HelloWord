@@ -1,6 +1,6 @@
 package com.laanait.shop.model;
 
-// Generated 20 nov. 2011 22:24:37 by Hibernate Tools 3.4.0.CR1
+// Generated 25 janv. 2012 13:59:40 by Hibernate Tools 3.4.0.CR1
 
 import java.math.BigDecimal;
 import java.util.Date;

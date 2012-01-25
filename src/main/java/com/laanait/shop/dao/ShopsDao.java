@@ -1,7 +1,6 @@
 package com.laanait.shop.dao;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 import org.hibernate.Session;
 
@@ -14,11 +13,13 @@ public class ShopsDao {
 	private static Session session;
 	
 	public static void main(String[] args) {
+		/*
 		Shops myShop=new Shops();
 		myShop.setShopName("Test");
 		myShop.setShopJoinDate(new Date());
 		ShopsDao.getInstance().addShop(myShop);
-		ShopsDao.getInstance().getShopById(1);
+		*/
+		System.out.println(ShopsDao.getInstance().getShopById(3).getShopName());
 	}
 	private ShopsDao(){
 		System.out.println("Maven + Hibernate + MySQL");
@@ -50,7 +51,7 @@ public class ShopsDao {
 	}
 
 	@SuppressWarnings("unchecked")
-	public ArrayList<Shops> getNearShopsByCoordinates(Double distance,double lat,double lon){
+	public ArrayList<Shops> getShopsByCoordinates(Double distance,double lat,double lon){
 		ArrayList<Shops> listShops=new ArrayList<Shops>();
 		ArrayList<Shops> listNearShops=new ArrayList<Shops>();
 		ArrayList<double[]> tabCoordinates=GeoLocalization.getInstance().getCoordinatesList(lat, lon, distance);

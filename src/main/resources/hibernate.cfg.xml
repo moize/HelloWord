@@ -1,27 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-configuration PUBLIC
-"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
-    <session-factory name="">
-        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
-        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/shops</property>
-        <property name="hibernate.connection.username">root</property>
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-        <property name="hibernate.search.autoregister_listeners">false</property>
-        <mapping resource="com/laanait/shop/model/Logs.hbm.xml" />
-        <mapping resource="com/laanait/shop/model/Companies.hbm.xml" />
-        <mapping resource="com/laanait/shop/model/Shops.hbm.xml" />
-        <mapping resource="com/laanait/shop/model/AdsShops.hbm.xml" />
-        <mapping resource="com/laanait/shop/model/CompaniesCategories.hbm.xml" />
-        <mapping resource="com/laanait/shop/model/ShopsCategories.hbm.xml" />
-        <mapping resource="com/laanait/shop/model/Ads.hbm.xml" />
-        <mapping resource="com/laanait/shop/model/Products.hbm.xml" />
-        <mapping resource="com/laanait/shop/model/Categories.hbm.xml" />
-        <mapping resource="com/laanait/shop/model/AdsProducts.hbm.xml" />
-        <mapping resource="com/laanait/shop/model/AdsCompanies.hbm.xml" />
-        <mapping resource="com/laanait/shop/model/ProductsPromo.hbm.xml" />
-        <mapping resource="com/laanait/shop/model/Users.hbm.xml" />
-    </session-factory>
+	<session-factory name="hibernate">
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.password">Punk1986</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/shops</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<mapping resource="com/laanait/shop/model/Logs.hbm.xml" />
+		<mapping resource="com/laanait/shop/model/Companies.hbm.xml" />
+		<mapping resource="com/laanait/shop/model/Shops.hbm.xml" />
+		<mapping resource="com/laanait/shop/model/AdsShops.hbm.xml" />
+		<mapping resource="com/laanait/shop/model/CompaniesCategories.hbm.xml" />
+		<mapping resource="com/laanait/shop/model/ShopsCategories.hbm.xml" />
+		<mapping resource="com/laanait/shop/model/Ads.hbm.xml" />
+		<mapping resource="com/laanait/shop/model/Products.hbm.xml" />
+		<mapping resource="com/laanait/shop/model/Categories.hbm.xml" />
+		<mapping resource="com/laanait/shop/model/AdsProducts.hbm.xml" />
+		<mapping resource="com/laanait/shop/model/AdsCompanies.hbm.xml" />
+		<mapping resource="com/laanait/shop/model/ProductsPromo.hbm.xml" />
+		<mapping resource="com/laanait/shop/model/Users.hbm.xml" />
+	</session-factory>
 </hibernate-configuration>

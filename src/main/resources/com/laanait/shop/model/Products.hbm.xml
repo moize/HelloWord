@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 20 nov. 2011 22:24:37 by Hibernate Tools 3.4.0.CR1 -->
+<!-- Generated 25 janv. 2012 13:59:41 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
     <class name="com.laanait.shop.model.Products" table="products" catalog="shops">
         <id name="productId" type="java.lang.Integer">
             <column name="product_id" />
-            <generator class="identity" />
+            <generator class="identity"></generator>
         </id>
         <property name="productName" type="string">
             <column name="product_name" length="60" />
